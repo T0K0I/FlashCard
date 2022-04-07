@@ -1,0 +1,33 @@
+#flipButtonG {
+    background-color: green;
+    color: white;
+}
+
+#flipButtonF {
+    background-color: red;
+    color: white;
+}
+
+#practiceCard {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    width: 80%;
+    height: 80vh;
+    position: relative;
+}
+
+#practiceCard button {
+    height: 70px;
+    font-size: 125%;
+    position: absolute;
+    bottom: 0;
+    margin-left: -50%;
+}
+
+#rateDiv button {
+    width: 50%;
+}
+
+
+

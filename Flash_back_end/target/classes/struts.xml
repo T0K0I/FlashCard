@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="simple"/>
+    <package name="basicstruts2" extends="json-default" namespace="/">
+
+        <!--index-->
+
+        <action name = "" class = "controller.AccountController" method = "start">
+            <result name="success">WEB-INF/paginas/login.jsp</result>
+        </action>
+
+        <action name = "login" class = "controller.AccountController" method = "login">
+            <result name="success">WEB-INF/paginas/main.jsp</result>
+            <result name="error">WEB-INF/paginas/login.jsp</result>
+        </action>
+
+        <action name = "register" class = "controller.AccountController" method = "register">
+            <result name="success">WEB-INF/paginas/login.jsp</result>
+            <result name="error">WEB-INF/paginas/login.jsp</result>
+        </action>
+
+
+        <!--deck acties-->
+
+        <action name = "createDeck" class = "controller.DeckController" method = "createDeck">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "getDecks" class = "controller.DeckController" method = "getDecks">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "updateDeck" class = "controller.DeckController" method = "updateDeck">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "deleteDeck" class = "controller.DeckController" method = "deleteDeck">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <!--card   eerste is het laatse actie die deck controller gebruitk-->
+        <action name = "getCardsOfDeck" class = "controller.DeckController" method = "getCardsOfDeck">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "createCard" class = "controller.CardController" method = "createCard">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "deleteCard" class = "controller.CardController" method = "deleteCard">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "updateCard" class = "controller.CardController" method = "updateCard">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+
+        <!--sessies acties-->
+
+        <action name = "startSessionByDeck" class = "controller.SessionController" method = "startSessionByDeck">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "getLatestSession" class = "controller.SessionController" method = "getLatestSession">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "repeatSession" class = "controller.SessionController" method = "repeatSession">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+
+
+        <action name = "getLatestSession" class = "controller.SessionController" method = "getLatestSession">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "rateCard" class = "controller.SessionController" method = "rateCard">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <!--Tag acties-->
+        <action name = "createTag" class = "controller.TagController" method = "createTag">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "deleteTag" class = "controller.TagController" method = "deleteTag">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "getCardsOfAccount" class = "controller.TagController" method = "getCardsOfAccount">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "getTagsOfCard" class = "controller.TagController" method = "getTagsOfCard">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "attachTagToCard" class = "controller.TagController" method = "attachTagToCard">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "detachTagFromCard" class = "controller.TagController" method = "detachTagFromCard">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "searchByName" class = "controller.TagController" method = "searchByName">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+        <action name = "updateTag" class = "controller.TagController" method = "updateTag">
+            <result type="json">
+                <param name="includeProperties"> returnResult </param>
+                <param name="root">responseJson</param>
+            </result>
+        </action>
+
+
+    </package>
+
+</struts>

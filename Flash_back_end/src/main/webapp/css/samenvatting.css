@@ -1,0 +1,30 @@
+b{
+    color: blue;
+}
+body{
+    text-align: center;
+
+      margin-top: 0%;
+       font-size: 200%;
+       height: auto;
+}
+html{
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+button, .sluit{
+    margin-left: 95%;
+    position: relative;
+    margin-top: 8%;
+    width: 5%;
+    height: 7%;
+}
+
+@media screen and (min-width: 1800px) {
+    button, .sluit{
+        margin-top: 18%;
+        width: 10%;
+        height: 4%;
+        margin-left: 90%;
+    }
+}

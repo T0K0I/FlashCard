@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+
+	<script>
+
+		const URLOFWEB = "http://localhost:8080/Flash_back_end/";
+		const IDOFACCOUNT = 3;
+		let IDOFDECK = 0;
+
+		function IS_ENTER_PRESSED(event) {
+			if (event.keyCode === 13) { return true }
+			else { return false }
+		}
+
+		async function MAKE_REQUEST(data, actie) {
+			const res = await fetch("" + actie, { body: data, method: "post", });
+			name = "";
+			return await res;
+		}
+
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+	<script defer src='/build/bundle.js'></script>
+</head>
+
+<body>
+</body>
+
+
+
+
+
+
+
+</html>

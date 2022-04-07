@@ -1,0 +1,62 @@
+html {
+    background: rgb(96, 138, 188);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tabs_kaart {
+    float: left;
+    background-color: gray;
+    min-width: 300px;
+    min-height: 300px;
+    margin-left: 5px;
+    width: 40%;
+    padding: 5px;
+}
+
+#kaart_nu {
+    min-width: 20px;
+    min-height: 40px;
+    background-color: rgb(160, 159, 159);
+    width: 80%;
+    height: 70%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+
+.lines_kaarten {
+    width: 100%;
+    background-color: rgb(49, 49, 49);
+    color: rgb(184, 184, 184);
+    margin: 0px;
+    text-align: left;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.lines_kaarten strong{
+    color: tomato;
+}
+
+.lines_kaarten:hover {
+    background: rgb(96, 138, 188);
+    color: white;
+}
+
+#card_inhoud {
+    padding: 5px;
+    overflow: auto;
+    height: 75%;
+}
+
+.scroll_tab {
+    height: 80%;
+    overflow: auto;
+}
+
+.card_button {
+    float: left;
+    width: 33%;
+    margin-left: 1px;
+}
